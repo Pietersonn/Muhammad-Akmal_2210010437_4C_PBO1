@@ -1,19 +1,24 @@
 package PBO;
 
 public class Bioskop {
-    // Atribut untuk menyimpan data tiket bioskop
+    private String nama;
     private String kodeTiket;
-    private String nomorKursi;
-    private int nomorStudio;
 
-    // Konstruktor untuk menginisialisasi objek Bioskop
-    public Bioskop(String kodeTiket, String nomorKursi, int nomorStudio) {
+    // Konstruktor
+    public Bioskop(String nama, String kodeTiket) {
+        this.nama = nama;
         this.kodeTiket = kodeTiket;
-        this.nomorKursi = nomorKursi;
-        this.nomorStudio = nomorStudio;
     }
 
-    // Getter dan setter lainnya sesuai kebutuhan
+    // Getter dan Setter
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
     public String getKodeTiket() {
         return kodeTiket;
     }
@@ -22,26 +27,11 @@ public class Bioskop {
         this.kodeTiket = kodeTiket;
     }
 
-    public String getNomorKursi() {
-        return nomorKursi;
-    }
-
-    public void setNomorKursi(String nomorKursi) {
-        this.nomorKursi = nomorKursi;
-    }
-
-    public int getNomorStudio() {
-        return nomorStudio;
-    }
-
-    public void setNomorStudio(int nomorStudio) {
-        this.nomorStudio = nomorStudio;
-    }
-
     // Metode untuk mendapatkan informasi tiket bioskop
-    public String infoTiket() {
-        return "Kode Tiket: " + getKodeTiket()
-                + "\nNomor Kursi: " + getNomorKursi()
-                + "\nNomor Studio: " + getNomorStudio();
+    public String infoTiket(String nomorKursi, int nomorStudio) {
+        return "Nama: " + getNama() +
+               "\nKode Tiket: " + getKodeTiket() +
+               "\nNomor Kursi: " + nomorKursi +
+               "\nNomor Studio: " + nomorStudio;
     }
 }
