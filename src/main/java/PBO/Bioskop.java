@@ -1,6 +1,7 @@
 package PBO;
 
 public class Bioskop {
+    //atribut dan encapsulation
     private String nama;
     private String kodeTiket;
 
@@ -10,28 +11,31 @@ public class Bioskop {
         this.kodeTiket = kodeTiket;
     }
 
-    // Getter dan Setter
-    public String getNama() {
-        return nama;
-    }
-
+    // setter (mutator)
     public void setNama(String nama) {
         this.nama = nama;
-    }
-
-    public String getKodeTiket() {
-        return kodeTiket;
     }
 
     public void setKodeTiket(String kodeTiket) {
         this.kodeTiket = kodeTiket;
     }
 
+    // Getter (Accesor)
+    public String getNama() {
+        return nama;
+    }
+
+    public String getKodeTiket() {
+        return kodeTiket;
+    }
+
+
+
     // Metode untuk mendapatkan informasi tiket bioskop
     public String infoTiket(String nomorKursi, int nomorStudio) {
-        return "Nama: " + getNama() +
-               "\nKode Tiket: " + getKodeTiket() +
-               "\nNomor Kursi: " + nomorKursi +
-               "\nNomor Studio: " + nomorStudio;
+        return "Nama: " + getNama()
+                + "\nKode Tiket: " + getKodeTiket()
+                + "\nNomor Kursi: " + nomorKursi
+                + "\nNomor Studio: " + nomorStudio;
     }
 }

@@ -1,16 +1,17 @@
 package PBO;
 
+//inheritance
 public class BioskopDetail extends Bioskop {
     private String judulFilm;
     private int barisKursi;
 
-    // Constructor
+    
     public BioskopDetail(String nama, String kodeTiket, String nomorKursi, int nomorStudio) {
         super(nama, kodeTiket);
         this.judulFilm = judulFilm(kodeTiket);
         this.barisKursi = calculateRow(nomorKursi.charAt(0));
     }
-
+    //seleksi
     private String judulFilm(String kodeTiket) {
         String kodeFilmStr = kodeTiket.substring(5, 7);
         switch (kodeFilmStr) {
@@ -38,6 +39,7 @@ public class BioskopDetail extends Bioskop {
                 throw new IllegalArgumentException("Kode Judul Film tidak valid.");
         }
     }
+    
 
     private int calculateRow(char barisKursiChar) {
         int nomorBaris = barisKursiChar - 'A' + 1;
@@ -47,14 +49,7 @@ public class BioskopDetail extends Bioskop {
         return nomorBaris;
     }
 
-    public String getJudulFilm() {
-        return judulFilm;
-    }
-
-    public int getBarisKursi() {
-        return barisKursi;
-    }
-
+  
     @Override
     public String infoTiket(String nomorKursi, int nomorStudio) {
         String kategori;

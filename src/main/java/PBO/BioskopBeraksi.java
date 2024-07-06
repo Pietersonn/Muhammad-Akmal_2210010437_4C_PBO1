@@ -5,15 +5,17 @@ import java.util.Scanner;
 public class BioskopBeraksi {
 
     public static void main(String[] args) {
+
+        // B101010
         try {
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Masukkan jumlah tiket bioskop yang akan dimasukkan: ");
             int jumlahTiket = scanner.nextInt();
-            scanner.nextLine();  // Mengonsumsi karakter newline
-
+            scanner.nextLine(); 
+            //array
             Bioskop[] tiketBioskop = new Bioskop[jumlahTiket];
-
+            //perulangan
             for (int i = 0; i < jumlahTiket; i++) {
                 System.out.println("\nMasukkan data untuk tiket bioskop ke-" + (i + 1));
 
@@ -30,7 +32,8 @@ public class BioskopBeraksi {
                 String nomorKursi = kodeTiket.substring(0, 3);
                 String nomorStudioStr = kodeTiket.substring(3, 5);
                 int nomorStudio = Integer.parseInt(nomorStudioStr);
-
+                
+                //objek
                 tiketBioskop[i] = new BioskopDetail(nama, kodeTiket, nomorKursi, nomorStudio);
 
                 System.out.println("----------------------------------------");
