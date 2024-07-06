@@ -32,7 +32,7 @@ public class BioskopBeraksi {
 2. **Object** adalah instance dari class. Pada kode ini, `tiketBioskop[i] = new BioskopDetail(nama, kodeTiket, nomorKursi, nomorStudio);` adalah contoh pembuatan object.
 
 ```bash
-tiketBioskop[i] = new BioskopDetail(nama, kodeTiket, nomorKursi, nomorStudio);
+tiketBioskop[i] = new BioskopDetail(nama, kodeTiket);
 ```
 
 3. **Atribut** adalah variabel yang ada dalam class. Pada kode ini, `nama` dan `kodeTiket` adalah contoh atribut.
