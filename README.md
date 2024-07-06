@@ -79,13 +79,7 @@ public String getKodeTiket() {
     return kodeTiket;
 }
 
-public String getJudulFilm() {
-    return judulFilm;
-}
 
-public int getBarisKursi() {
-    return barisKursi;
-}
 
 ```
 
